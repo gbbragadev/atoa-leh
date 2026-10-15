@@ -1,0 +1,21 @@
+.paint-viewport { width: 100%; min-width: 0; }
+.paint-viewport-controls { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 0 12px; }
+.paint-viewport-controls button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 44px; min-height: 44px; border: 1px solid #dce0d2; border-radius: 12px; background: #fffdf6; color: #596a4d; cursor: pointer; font: inherit; font-size: .8rem; }
+.paint-viewport-controls button:disabled { opacity: .36; cursor: default; }
+.paint-viewport-controls button:focus-visible { outline: 3px solid #c59f94; outline-offset: 3px; }
+.paint-viewport-zoom { display: flex; align-items: center; gap: 4px; }
+.paint-viewport-zoom output { min-width: 43px; text-align: center; font-size: .73rem; font-variant-numeric: tabular-nums; color: #7b866f; }
+.paint-viewport-controls .paint-viewport-tool { min-width: 94px; padding: 0 12px; }
+.paint-viewport-controls .paint-viewport-tool.is-moving { background: #e6ebdc; border-color: #a2b48d; }
+.paint-viewport-surface { position: relative; aspect-ratio: 1; width: 100%; overflow: hidden; border: 1px solid rgba(88, 94, 71, .16); border-radius: 18px; background: #fffaf0; touch-action: none; user-select: none; -webkit-user-select: none; cursor: crosshair; box-shadow: 0 8px 24px rgba(61, 68, 45, .04); }
+.paint-viewport-surface.is-moving, .paint-viewport-surface.is-moving * { cursor: grab; }
+.paint-viewport-surface.is-moving:active, .paint-viewport-surface.is-moving:active * { cursor: grabbing; }
+.paint-viewport-content { width: 100%; height: 100%; transform-origin: 0 0; will-change: transform; }
+.paint-viewport-content > svg, .paint-viewport-content > canvas { display: block; width: 100%; height: 100%; }
+.paint-viewport-hint { margin: 10px 0 0; text-align: center; line-height: 1.45; color: #7e8972; font-size: .75rem; }
+@media (max-width: 370px) {
+  .paint-viewport-controls { gap: 5px; }
+  .paint-viewport-controls .paint-viewport-tool { min-width: 76px; padding: 0 8px; }
+  .paint-viewport-zoom { gap: 2px; }
+  .paint-viewport-zoom output { min-width: 37px; }
+}

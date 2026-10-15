@@ -1,0 +1,63 @@
+.nature-garden-expanded .nature-garden-inspiration { margin: 0 0 18px; padding: 14px 16px; border: 1px solid #dfe3d4; border-radius: 18px; background: #f4f5eb; }
+.nature-garden-inspiration > summary { cursor: pointer; color: #637759; font: 500 .85rem 'DM Sans', sans-serif; min-height: 30px; line-height: 30px; touch-action: manipulation; }
+.nature-garden-inspiration > p { margin: 12px 0 0; color: #8a8c76; font-size: .72rem; line-height: 1.7; }
+.nature-garden-compositions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding-top: 13px; }
+.nature-garden-composition { padding: 8px 8px 13px; border: 1px solid #dfe1d3; border-radius: 16px; background: #faf9f1; color: #617052; cursor: pointer; text-align: left; font: inherit; touch-action: manipulation; transition: background .18s, border-color .18s; }
+.nature-garden-composition:hover { background: #edf2e3; border-color: #9cb28e; }
+.nature-garden-composition > svg { display: block; width: 100%; height: auto; margin-bottom: 10px; border-radius: 11px; }
+.nature-garden-composition > strong { display: block; margin: 0 5px 5px; font: 500 .96rem 'Fraunces', Georgia, serif; }
+.nature-garden-composition > span { display: block; margin-inline: 5px; color: #91917b; font-size: .66rem; line-height: 1.5; }
+.nature-garden-expanded .nature-workspace { grid-template-columns: minmax(0, 1fr) 258px; }
+.nature-garden-expanded .nature-garden-species { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.nature-garden-expanded .nature-garden-species .nature-stamp-button { min-height: 101px; padding: 5px 4px 9px; }
+.nature-garden-expanded .nature-garden-species .nature-stamp-button > svg { width: 57px; height: 65px; }
+.nature-garden-expanded .nature-garden-species .nature-stamp-button > span { font-size: .62rem; }
+.nature-garden-pots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.nature-garden-pot { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 84px; gap: 5px; padding: 6px 4px 9px; border: 1px solid #deded0; border-radius: 13px; color: #78806a; background: #faf8ef; cursor: pointer; font: inherit; font-size: .61rem; touch-action: manipulation; }
+.nature-garden-pot svg { width: 52px; height: 49px; }
+.nature-garden-pot:hover, .nature-garden-pot.is-active { border-color: #9db28e; background: #edf2e3; color: #536b4b; }
+.nature-garden-selected { display: grid; gap: 5px; padding: 13px; border-radius: 15px; background: #ebf1df; color: #68795c; }
+.nature-garden-selected > span { font-size: .66rem; }
+.nature-garden-selected > strong { font: 500 .95rem 'Fraunces', Georgia, serif; }
+.nature-garden-selected .soft-button { justify-content: center; margin-top: 8px; font-size: .71rem; min-height: 42px; }
+.nature-garden-free-creature { margin: 0; color: #8e917b; font-size: .74rem; line-height: 1.65; }
+.nature-garden-expanded .nature-garden-actions { gap: 8px; }
+.nature-garden-dialog-backdrop { position: fixed; inset: 0; z-index: 1100; display: grid; place-items: center; padding: 22px; background: #37453566; backdrop-filter: blur(3px); }
+.nature-garden-dialog { width: min(100%, 450px); padding: 27px; border: 1px solid #e5e6d9; border-radius: 26px; background: #faf8ee; box-shadow: 0 20px 80px #1c2c2938; }
+.nature-garden-dialog > h2 { margin: 8px 0 15px; color: #5b6f50; font: 500 1.65rem/1.25 'Fraunces', Georgia, serif; }
+.nature-garden-dialog > p { margin: 0 0 23px; color: #81836f; font-size: .83rem; line-height: 1.75; }
+.nature-garden-dialog > div { display: flex; flex-wrap: wrap; gap: 9px; }
+.nature-garden-dialog button { min-height: 46px; }
+@media (max-width: 1000px) {
+  .nature-garden-expanded .nature-workspace { grid-template-columns: minmax(0, 1fr) 218px; gap: 17px; }
+  .nature-garden-expanded .nature-garden-species .nature-stamp-button > span { font-size: .57rem; }
+}
+@media (max-width: 720px) {
+  .nature-garden-expanded .nature-workspace { display: flex; }
+  .nature-garden-expanded .nature-garden-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px; }
+  .nature-garden-expanded .nature-garden-controls > .nature-garden-plant-picker { grid-column: 1 / -1; }
+  .nature-garden-expanded .nature-garden-species { display: grid; grid-template-columns: repeat(7, 87px); grid-auto-flow: row; grid-template-rows: repeat(2, auto); gap: 7px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x proximity; }
+  .nature-garden-expanded .nature-garden-species .nature-stamp-button { min-width: 87px; min-height: 101px; scroll-snap-align: start; }
+  .nature-garden-expanded .nature-garden-species .nature-stamp-button > span { font-size: .62rem; }
+  .nature-garden-expanded .nature-garden-selected { grid-column: 1 / -1; grid-template-columns: 1fr auto; align-items: center; }
+  .nature-garden-expanded .nature-garden-selected > span { grid-column: 1; }
+  .nature-garden-expanded .nature-garden-selected > strong { grid-column: 1; }
+  .nature-garden-expanded .nature-garden-selected .soft-button { grid-row: 1 / 3; grid-column: 2; margin: 0; }
+  .nature-garden-expanded .nature-garden-pot-picker { grid-column: 1 / -1; }
+  .nature-garden-expanded .nature-garden-pots { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+  .nature-garden-expanded .nature-garden-pot { font-size: .57rem; min-height: 81px; border-radius: 11px; }
+  .nature-garden-expanded .nature-garden-pot svg { width: 43px; }
+  .nature-garden-compositions { gap: 8px; }
+  .nature-garden-composition { padding: 5px 5px 11px; }
+  .nature-garden-composition > strong { font-size: .8rem; }
+  .nature-garden-composition > span { font-size: .58rem; }
+  .nature-garden-dialog { padding: 24px; }
+  .nature-garden-dialog > h2 { font-size: 1.45rem; }
+}
+@media (max-width: 390px) {
+  .nature-garden-expanded .nature-garden-pots { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .nature-garden-expanded .nature-garden-pot { font-size: .67rem; }
+  .nature-garden-expanded .nature-garden-controls { gap: 17px 12px; }
+  .nature-garden-composition > span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .nature-garden-composition { transition: none; } }

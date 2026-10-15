@@ -1,0 +1,102 @@
+.nature-game { --nature-ink: #45483d; --nature-muted: #777a6b; --nature-soft: #f4f0e6; --nature-line: #dedfd2; color: var(--nature-ink); }
+.nature-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.nature-intro { margin: 0 0 20px; max-width: 620px; }
+.nature-eyebrow { display: block; margin-bottom: 7px; color: #78906e; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.nature-intro p { margin: 0; color: var(--nature-muted); font-size: .95rem; line-height: 1.65; }
+.nature-toolbar { gap: 12px; flex-wrap: wrap; justify-content: space-between; margin-bottom: 18px; }
+.nature-toolbar .segmented { flex-wrap: wrap; }
+.nature-game .segmented button { touch-action: manipulation; min-height: 42px; }
+.nature-game .segmented button[aria-pressed="true"] { background: #5b7459; color: #fff9ed; box-shadow: 0 2px 5px #435d4317; }
+.nature-workspace { display: grid; grid-template-columns: minmax(0, 1fr) 238px; gap: 24px; align-items: start; }
+.nature-canvas { overflow: hidden; border-radius: 24px; border: 1px solid #dfdfd0; background: var(--nature-soft); box-shadow: 0 12px 35px #59674a0a; }
+.nature-canvas > svg { display: block; width: 100%; height: auto; touch-action: none; user-select: none; -webkit-user-select: none; }
+.garden-canvas > svg { cursor: crosshair; }
+.nature-controls { display: flex; flex-direction: column; gap: 22px; min-width: 0; padding: 6px 0; }
+.nature-controls .control-label, .cats-toys > .control-label { display: block; margin-bottom: 10px; font-size: .76rem; font-weight: 600; color: #717964; }
+.nature-stamp-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.nature-stamp-button { display: flex; flex-direction: column; gap: 6px; align-items: center; justify-content: flex-end; padding: 8px 5px 10px; min-height: 116px; border-radius: 14px; border: 1px solid #e1e1d6; background: #faf8f0; color: #5f6856; cursor: pointer; font: inherit; transition: background .18s, border-color .18s, transform .18s; touch-action: manipulation; }
+.nature-stamp-button > svg { width: 49px; height: 70px; overflow: visible; }
+.nature-stamp-button > span { font-size: .68rem; line-height: 1.25; text-align: center; }
+.nature-stamp-button:hover, .nature-stamp-button.is-active { border-color: #9cae90; background: #eaf0e1; }
+.nature-stamp-button:active { transform: scale(.97); }
+.nature-place-button { width: 100%; margin-top: 10px; font-size: .73rem; }
+.nature-range { display: flex !important; flex-direction: column; gap: 12px; }
+.nature-range input { width: 100%; accent-color: #6e8864; min-height: 25px; cursor: pointer; }
+.nature-controls .segmented { display: flex; width: 100%; }
+.nature-controls .segmented button { flex: 1; font-size: .71rem; padding-inline: 9px; }
+.nature-controls .color-palette { gap: 8px; }
+.nature-actions { flex-wrap: wrap; gap: 10px; margin: 22px 0 0; }
+.nature-actions .primary-button { margin-left: auto; }
+.nature-game button:disabled { opacity: .45; cursor: default; }
+.nature-note { line-height: 1.6; margin-top: 18px; min-height: 24px; }
+.nature-hint { color: #929581; font-size: .73rem; line-height: 1.7; margin-top: 8px; }
+.garden-item { cursor: grab; outline: none; }
+.garden-item:active { cursor: grabbing; }
+.garden-item:focus-visible > rect { fill: #ffffff20; stroke: #658260; stroke-width: 2; stroke-dasharray: 5 4; rx: 15; }
+.cats-canvas { max-width: 760px; margin-inline: auto; }
+.cats-character { cursor: pointer; outline: none; }
+.cats-character:focus-visible > ellipse:first-child { stroke: #fff9ed; stroke-width: 3; }
+.cats-character:hover { filter: brightness(1.035); }
+.cats-love { animation: cats-little-heart .65s ease-out both; transform-box: fill-box; transform-origin: bottom center; }
+.cats-cat-picker { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 18px 0 25px; }
+.cats-name-button { display: flex; gap: 9px; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid #e2dfd2; border-radius: 99px; background: #faf8f1; color: #727563; font: inherit; font-size: .77rem; cursor: pointer; touch-action: manipulation; }
+.cats-name-button.is-active { border-color: #99ad91; background: #eaf0e1; color: #51654c; }
+.cats-coat { width: 15px; height: 15px; border-radius: 50%; background: #535b55; flex-shrink: 0; }
+.cats-coat-farofa { background: #d3a06a; }
+.cats-coat-soneca { background: linear-gradient(145deg, #f4eddb 45%, #535b55 46% 68%, #d3a06a 69%); }
+.cats-toys { max-width: 640px; margin-inline: auto; }
+.cats-toys > .control-label { text-align: center; }
+.cats-toy-list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.cats-toy-button { display: flex; flex-direction: column; align-items: center; gap: 5px; min-height: 106px; padding: 13px 4px; border: 1px solid #e5dfd2; border-radius: 17px; background: #faf7ee; color: #716f5d; font: inherit; font-size: .74rem; cursor: pointer; touch-action: manipulation; transition: background .18s, transform .18s; }
+.cats-toy-button svg { display: block; width: 70px; max-width: 100%; height: 56px; }
+.cats-toy-button:hover, .cats-toy-button.is-active { background: #f1e5d8; border-color: #c6ab96; }
+.cats-toy-button:active { transform: scale(.96); }
+.sand-canvas > svg { cursor: crosshair; }
+.sand-treasure { cursor: grab; outline: none; }
+.sand-treasure:active { cursor: grabbing; }
+.sand-pass-through { pointer-events: none; }
+.sand-treasure:focus-visible > rect { fill: #ffffff20; stroke: #6c8263; stroke-width: 2; stroke-dasharray: 4 5; rx: 15; }
+.sand-stamp-list .nature-stamp-button { min-height: 112px; }
+.sand-stamp-list .nature-stamp-button > svg { width: 60px; height: 69px; }
+.nature-side-note { margin: 0; padding: 17px; border-radius: 16px; background: #eeeee2; color: #81806b; font-family: 'Fraunces', Georgia, serif; font-size: .93rem; line-height: 1.65; }
+.sand-tide { animation: sand-little-tide 1.05s ease-in-out both; }
+@keyframes cats-little-heart { from { opacity: 0; transform: translateY(8px) scale(.75); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes sand-little-tide { 0% { transform: translateY(-680px); opacity: .85; } 45% { transform: translateY(70px); opacity: .9; } 100% { transform: translateY(-680px); opacity: 0; } }
+@media (max-width: 960px) {
+  .nature-workspace { grid-template-columns: minmax(0, 1fr) 194px; gap: 18px; }
+  .nature-stamp-button { min-height: 108px; }
+  .nature-stamp-button > svg { height: 60px; }
+}
+@media (max-width: 720px) {
+  .nature-intro { margin-bottom: 17px; }
+  .nature-eyebrow { font-size: .64rem; }
+  .nature-intro p { font-size: .86rem; }
+  .nature-workspace { display: flex; flex-direction: column; gap: 18px; }
+  .nature-canvas { width: 100%; border-radius: 20px; }
+  .nature-controls { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px; }
+  .garden-game .nature-controls > div:first-child { grid-column: 1 / -1; }
+  .garden-game .nature-stamp-list { display: flex; gap: 8px; overflow-x: auto; padding: 1px 1px 8px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+  .garden-game .nature-stamp-button { min-width: 87px; min-height: 105px; flex: 0 0 87px; scroll-snap-align: start; }
+  .nature-actions { gap: 8px; }
+  .nature-actions .soft-button, .nature-actions .primary-button { font-size: .77rem; min-height: 44px; }
+  .nature-actions .primary-button { margin-left: 0; }
+  .nature-toolbar { justify-content: flex-start; gap: 9px; }
+  .nature-toolbar .segmented button { padding-inline: 12px; font-size: .73rem; }
+  .cats-cat-picker { gap: 6px; margin-block: 16px 21px; }
+  .cats-name-button { font-size: .7rem; padding-inline: 11px; gap: 6px; }
+  .cats-toy-list { gap: 7px; }
+  .cats-toy-button { min-height: 92px; font-size: .65rem; border-radius: 13px; }
+  .cats-toy-button svg { height: 46px; }
+  .sand-game .nature-controls > div:nth-child(2) { grid-row: span 2; }
+  .sand-game .nature-side-note { grid-column: 1 / -1; }
+  .nature-note { font-size: .82rem; }
+}
+@media (max-width: 390px) {
+  .nature-controls { gap: 18px 12px; }
+  .nature-controls .segmented { flex-direction: column; }
+  .cats-name-button { padding-inline: 9px; font-size: .66rem; }
+  .cats-coat { width: 12px; height: 12px; }
+  .cats-toy-button { font-size: .6rem; }
+}
+@media (prefers-reduced-motion: reduce) { .cats-love, .sand-tide { animation: none; } .cats-toy-button, .nature-stamp-button { transition: none; } }
+[data-reduced-motion="true"] .cats-love, [data-reduced-motion="true"] .sand-tide, .reduce-motion .cats-love, .reduce-motion .sand-tide { animation: none; }
